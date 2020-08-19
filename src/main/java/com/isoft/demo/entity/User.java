@@ -22,7 +22,7 @@ public class User implements Serializable {
     public static final int STATUS_NONE_ACTIVE = 0 ;
     public static final int STATUS_ACTIVE = 1 ;
 
-    @TableId(type = IdType.AUTO)
+    @TableId(value = "userId",type = IdType.AUTO)
     private Integer userId;
     @TableField("userName")
     private String userName;

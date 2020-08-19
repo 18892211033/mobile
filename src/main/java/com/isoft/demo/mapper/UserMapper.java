@@ -9,9 +9,6 @@ import org.apache.ibatis.annotations.Update;
 
 @Mapper
 public interface UserMapper extends BaseMapper<User> {
-    @Select("select count(*) from tb_user where userId=#{userId} and userPass=#{userPass}")
-    int getPassCounts(@Param("userId")Integer userId, @Param("userPass")String userPass);
-
     @Update(
             "<script>"+
                     "       update tb_user" +
